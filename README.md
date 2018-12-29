@@ -95,4 +95,34 @@ random normal number generation method. An Adam optimization algorithm was utili
 instead of a Gradient Descent algorithm. This was done by recommendation of multiple 
 machine learning forums and blogs, such as [machinelearningmastery.com](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/). 
 In practice, it is incredibly effective.
+## Final Results
+After 60,000 epoch, the final model converges to approximately 98.57% accuracy at 
+classifying whether the input data corresponds to breast cancer that is malignant 
+or benign. This model used a learning rate base decay of 96% every 100 epoch, 
+the Adam Optimization algorithm, and an initial learning rate of 0.1%. Given better 
+end conditions, this resulting model could be trained significantly faster.
+## Conclusion
+This project presents multiple iterations of a multi-layered neural network to 
+classify breast cancer cells as either malignant or benign. For training, 499 
+records out of the total 569 records of breast cancer cell attributes were used. 
+The remaining 70 records were used as testing data. In order to reach a 
+sufficiently high level of accuracy, the model was adapted over a number of 
+iterations, with each iteration attempting to resolve issues with the previous 
+model.
+
+
+For all of these iterations, the final iteration with an exponentially decaying 
+learning rate and a much higher training time presented the highest accuracy at 
+roughly 98.57% accuracy. These iterations present many lessons to be learned from. 
+For instance, the usefulness of simply increasing the training time falls off. 
+Even a small learning rate eventually will result in an overshooting problem. 
+An exponentially decaying learning rate seems to solve both of these issues, 
+but the rate of decay and the initial learning rate may need to be adjusted too. 
+Still, this dynamic learning rate provides a rather simple solution to a common problem.
+
+
+
+
+
+
 
